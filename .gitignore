@@ -1,0 +1,16 @@
+node_modules/
+.wrangler/
+.dev.vars
+*.log
+.DS_Store
+worker/.wrangler/
+worker/.dev.vars
+dist/
+coverage/
+.env
+.env.local
+.tidb-zero.json
+worker/.tidb-zero.json
+backups/
+*.sql.gz
+.cursor/

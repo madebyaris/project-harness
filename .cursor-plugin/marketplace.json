@@ -1,0 +1,13 @@
+{
+  "name": "project-harness",
+  "owner": {
+    "name": "Aris"
+  },
+  "plugins": [
+    {
+      "name": "project-harness",
+      "source": "./",
+      "description": "Project-scoped Grok Bot harness: bounded capsules, lead gates, and pstack briefs via a remote MCP."
+    }
+  ]
+}

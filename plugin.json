@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "project-harness",
+  "version": "0.1.0",
+  "description": "Project-scoped Grok Bot harness: bounded capsules, objective lead gates, and pstack briefs via a Cloudflare MCP backed by TiDB Cloud Zero.",
+  "author": {
+    "name": "Aris"
+  },
+  "license": "MIT",
+  "keywords": [
+    "grok-bot",
+    "pstack",
+    "mcp",
+    "project-scope",
+    "harness"
+  ],
+  "variables": {
+    "type": "object",
+    "properties": {
+      "MCP_URL": {
+        "type": "string",
+        "title": "Project harness MCP URL",
+        "description": "HTTPS Streamable HTTP endpoint, e.g. https://project-harness.<account>.workers.dev/mcp"
+      },
+      "MCP_TOKEN": {
+        "type": "string",
+        "title": "Project harness bearer token",
+        "description": "Personal bearer token matching the Worker MCP_TOKEN secret. Never commit the real value."
+      }
+    },
+    "required": ["MCP_URL", "MCP_TOKEN"]
+  }
+}

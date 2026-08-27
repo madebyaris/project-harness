@@ -1,0 +1,14 @@
+{
+  "name": "project-harness",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "npm test --prefix worker && node scripts/validate-plugin.mjs",
+    "test:plugin": "node scripts/validate-plugin.mjs",
+    "test:worker": "npm test --prefix worker",
+    "provision": "npm run provision --prefix worker",
+    "migrate": "npm run migrate --prefix worker",
+    "backup": "npm run backup --prefix worker",
+    "restore": "npm run restore --prefix worker --"
+  }
+}
