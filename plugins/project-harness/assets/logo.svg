@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Project harness">
+  <rect width="128" height="128" rx="28" fill="#111827"/>
+  <path d="M30 35h68v16H30zm0 42h68v16H30z" fill="#60a5fa"/>
+  <circle cx="42" cy="64" r="11" fill="#f8fafc"/>
+  <circle cx="86" cy="64" r="11" fill="#f8fafc"/>
+  <path d="M42 51v-8m0 42v-8m44-26v-8m0 42v-8" stroke="#60a5fa" stroke-width="8" stroke-linecap="round"/>
+</svg>

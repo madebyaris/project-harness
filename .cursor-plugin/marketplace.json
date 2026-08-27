@@ -3,11 +3,17 @@
   "owner": {
     "name": "Aris"
   },
+  "metadata": {
+    "description": "Private plugins by Aris.",
+    "version": "0.1.1",
+    "pluginRoot": "plugins"
+  },
   "plugins": [
     {
       "name": "project-harness",
-      "source": "./",
-      "description": "Project-scoped Grok Bot harness: bounded capsules, lead gates, and pstack briefs via a remote MCP."
+      "source": "project-harness",
+      "description": "Project-scoped Grok Bot harness: bounded capsules, lead gates, and pstack briefs via a remote MCP.",
+      "version": "0.1.1"
     }
   ]
 }

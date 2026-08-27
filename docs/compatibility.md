@@ -1,6 +1,6 @@
 # Compatibility spike
 
-Grok Bot follows Cursor Agent Plugins. Remote Streamable HTTP MCP is in the spec. The unproven part is a **private** plugin under **Plugins → Yours** talking to a Cloudflare Worker with a bearer token.
+Grok Bot exposes Cursor team marketplace plugins. Remote Streamable HTTP MCP is supported. The remaining live check is a private team plugin talking to the Cloudflare Worker with a bearer token.
 
 Do not treat later layers as done until this list passes on a live Bot.
 
@@ -16,7 +16,7 @@ Do not treat later layers as done until this list passes on a live Bot.
 
 ## Grok Bot
 
-- [ ] Plugin appears under Plugins → Yours
+- [ ] Team admin imports the GitHub repo and the plugin appears under **Team plugins**
 - [ ] `MCP_URL` and `MCP_TOKEN` are accepted
 - [ ] `harness_ping` works from the Bot
 - [ ] `/project` creates Project A, `/project` on Project B does not see A's canary

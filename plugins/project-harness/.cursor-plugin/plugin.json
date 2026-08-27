@@ -1,12 +1,21 @@
 {
   "name": "project-harness",
   "displayName": "Project harness",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Project-scoped Grok Bot harness: bounded capsules, objective lead gates, and pstack briefs via a remote MCP backed by TiDB Cloud Zero.",
   "author": {
     "name": "Aris"
   },
+  "homepage": "https://github.com/madebyaris/project-harness",
+  "repository": "https://github.com/madebyaris/project-harness",
   "license": "MIT",
+  "logo": "assets/logo.svg",
+  "category": "developer-tools",
+  "tags": [
+    "agent-orchestration",
+    "project-memory",
+    "mcp"
+  ],
   "keywords": [
     "grok-bot",
     "pstack",
@@ -14,14 +23,16 @@
     "project-scope",
     "harness"
   ],
-  "skills": "./skills",
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json",
   "variables": {
     "type": "object",
     "properties": {
       "MCP_URL": {
         "type": "string",
         "title": "Project harness MCP URL",
-        "description": "HTTPS Streamable HTTP endpoint, e.g. https://project-harness.<account>.workers.dev/mcp"
+        "description": "HTTPS Streamable HTTP endpoint.",
+        "default": "https://project-harness.aris-41b.workers.dev/mcp"
       },
       "MCP_TOKEN": {
         "type": "string",
@@ -29,6 +40,6 @@
         "description": "Personal bearer token matching the Worker MCP_TOKEN secret. Never commit the real value."
       }
     },
-    "required": ["MCP_URL", "MCP_TOKEN"]
+    "required": ["MCP_TOKEN"]
   }
 }

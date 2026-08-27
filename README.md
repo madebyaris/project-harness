@@ -8,9 +8,10 @@ pstack is a separate plugin. This repo does not copy it. Research, coding, and r
 
 ## Layout
 
-- `plugin.json` / `mcp.json` — Grok Bot plugin manifests. Variables: `MCP_URL`, `MCP_TOKEN`.
+- `.cursor-plugin/marketplace.json` — team marketplace index for this GitHub repository.
+- `plugins/project-harness/` — Cursor/Grok Bot plugin manifest, skills, logo, and remote MCP configuration.
 - `worker/` — stateless Streamable HTTP MCP on `/mcp`.
-- `skills/` — `/project` `/lead` `/research` `/code` `/drain`. Slash-only.
+- `plugins/project-harness/skills/` — `/project` `/lead` `/research` `/code` `/drain`. Slash-only.
 - `evals/` — canaries and scoring notes. Token reduction is measured, not promised.
 
 ## Quick start
@@ -19,7 +20,7 @@ pstack is a separate plugin. This repo does not copy it. Research, coding, and r
 2. `npm run provision` — creates a TiDB Cloud Zero instance, writes `.tidb-zero.json` (gitignored).
 3. `npm run migrate`
 4. `npx wrangler secret put MCP_TOKEN` and `npx wrangler secret put TIDB_CONNECTION_STRING`, then `npx wrangler deploy`. Local: `npm run dev` (reads `worker/.dev.vars`).
-5. Import this GitHub repo as a **Team marketplace** in Cursor/Grok Bot Plugins, install **project-harness**, then set `MCP_URL` and `MCP_TOKEN`. Local folder copies under `~/.cursor/plugins/local` do not appear in Marketplace search.
+5. A team admin imports this GitHub repo from **Dashboard → Plugins → Team Marketplaces → Add Marketplace → Import from Repo**. Install **project-harness**, then configure `MCP_TOKEN`. `MCP_URL` already defaults to the deployed Worker and remains overridable.
 6. Install pstack separately.
 
 Zero instances last up to 30 days unless you open the claim URL printed by `provision`. Download a dump before that:

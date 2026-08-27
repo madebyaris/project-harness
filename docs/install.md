@@ -62,16 +62,16 @@ After a Worker deploy, state stays in TiDB, not in the isolate.
 
 ## 3. Grok Bot plugin
 
-Marketplace search only lists Team/GitHub plugins, not `~/.cursor/plugins/local`. Import this repository as a **Team marketplace** (Cursor Dashboard → Plugins, or Grok Bot Plugins → Team plugins), then install **project-harness** and enable it on the Bot.
+Marketplace search only lists marketplace plugins, not `~/.cursor/plugins/local`. A team admin must import this private repository from **Cursor Dashboard → Plugins → Team Marketplaces → Add Marketplace → Import from Repo**. Configure marketplace access, then install **project-harness** from the **Team plugins** filter and enable it on the Bot.
 
 Set:
 
-- `MCP_URL` — `https://project-harness.aris-41b.workers.dev/mcp`
+- `MCP_URL` — defaults to `https://project-harness.aris-41b.workers.dev/mcp`; override only for another deployment
 - `MCP_TOKEN` — same value as the Wrangler secret (`worker/.dev.vars`, never commit it)
 
 If the repo is private, complete GitHub auth so Grok Bot's computer can clone it.
 
-`plugin.json` carries a top-level `variables` object. The public Agent Plugins 1.0 schema does not list that field. Grok Bot still reads it. Do not strip it to please a strict schema check.
+This is a Cursor Plugin, not a dual Cursor/Agent manifest. `plugins/project-harness/.cursor-plugin/plugin.json` declares the variables and explicitly points to the plugin's `mcp.json`. Keeping one manifest avoids Cursor selecting an Agent Plugin manifest that cannot declare Cursor variables.
 
 Use one Bot or a fresh chat per project. The plugin cannot clear native memory.
 
